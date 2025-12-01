@@ -226,12 +226,11 @@ $conn->close();
     <div class="area-aluno">
         <h3>Conteudo do curso</h3>
         <?php if ($comprou && $aprovado): ?>
-        <a href="Mídias/Certificado.png" download class="btn-curso" id="btnCertificado">
+        <a href="Mídias/Certificado.pdf" download class="btn-curso" id="btnCertificado">
             <i class="fa-solid fa-file-arrow-down"></i> Baixar Certificado
         </a>
 <?php endif; ?>
         <?php
-        // A condição foi simplificada, assumindo que $aprovado já foi definido
         if (!$aprovado){
             echo '<a class="btn-curso" href="prova.php?curso=' . $id . '"><i class="fa-solid fa-file-circle-check"></i> Fazer Prova</a>';
         } else {
@@ -248,7 +247,7 @@ $conn->close();
     <footer>
     <div id="footer-content">
         <div class="footer-section">
-            <h3>FinWise</h3>
+            <h3>NeoWise</h3>
             <p>Sua plataforma de cursos online para se destacar no mercado.</p>
         </div>
         <div class="footer-section">

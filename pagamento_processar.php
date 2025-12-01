@@ -104,7 +104,7 @@ try {
     $stmt->close();
 
     $conn->commit();
-    header("Location: index.php?status=sucesso");
+    header("Location: cursos.php?status=comprado");
     exit();
 
 } catch (Throwable $e) {

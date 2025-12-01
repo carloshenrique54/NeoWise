@@ -82,5 +82,5 @@ nextBtn.addEventListener('click', () => {
     mostrarPagina();
 });
 
-// Inicializa
+
 filtrarCursos();

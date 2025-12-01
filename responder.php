@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['resposta'], $_POST['i
     </div>
     <nav>
         <ul>
-            <li><a id="home" href="index.php">Home</a></li>
+            <li><a id="home" href="index.php">Ínicio</a></li>
             <li><a id="cursos" href="cursos.php">Cursos</a></li>
             <li><a id="sobre" href="sobre.php">Sobre</a></li>
             <li><a id="contato" href="contato.php">Contato</a></li>
@@ -117,6 +117,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['resposta'], $_POST['i
     ?>
 </main>
 <script src="tema.js"></script>
+<script src="responder.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<div id="modal-sucesso">
+    <div class="modal-conteudo">
+        <h2>Resposta enviada!</h2>
+        <p>A resposta foi enviada para o aluno com sucesso.</p>
+    </div>
+</div>
+
+<script>
+(function () {
+    emailjs.init("yexqvxDUHrrXPU6Wf");
+})();
+</script>
+
 <script src="responder.js"></script>
 </body>
 </html>

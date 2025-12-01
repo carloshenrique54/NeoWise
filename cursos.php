@@ -126,7 +126,12 @@ $conn->close();
     </div>
 </div>
 </main>
-
+<div id="modal-sucesso">
+    <div class="modal-conteudo">
+        <h2>✔ Sucesso!</h2>
+        <p>Compra realizada com sucesso.</p>
+    </div>
+</div>
 <footer>
     <div id="footer-content">
         <div class="footer-section">
@@ -224,6 +229,16 @@ nextBtn.addEventListener('click', ()=>{
     paginaAtual++;
     mostrarPagina();
 });
+
+window.onload = () => {
+    if (window.location.search.includes('status=comprado')) {
+        const modal = document.getElementById("modal-sucesso");
+        modal.classList.add("mostrar");
+        setTimeout(() => {
+            modal.classList.remove("mostrar");
+        }, 3000);
+    }
+};
 
 filtrarCursos();
 </script>

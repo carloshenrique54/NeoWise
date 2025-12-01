@@ -80,7 +80,7 @@
   <footer>
         <div id="footer-content">
             <div class="footer-section">
-                <h3>FinWise</h3>
+                <h3>NeoWise</h3>
                 <p>Sua plataforma de cursos online para se tornar um profissional de destaque no mercado.</p>
             </div>
             <div class="footer-section">

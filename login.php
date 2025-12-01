@@ -61,7 +61,7 @@
         <button type="button" id="forgot-password">Esqueci minha senha</button>
         <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
         
-            <span id="mensagem"></span>
+            <span id="mensagem-form"></span>
 
       </form>
       <div id="mensagem"></div>
@@ -70,7 +70,7 @@
     <footer>
         <div id="footer-content">
             <div class="footer-section">
-                <h3>FinWise</h3>
+                <h3>NeoWise</h3>
                 <p>Sua plataforma de cursos online para se tornar um profissional de destaque no mercado.</p>
             </div>
             <div class="footer-section">

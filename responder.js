@@ -1,16 +1,30 @@
-const modal = document.getElementById('responderModal');
-const closeModal = modal.querySelector('.close');
-const buttons = document.querySelectorAll('.responder-btn');
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("form-resposta");
+    const modalSucesso = document.getElementById("modal-sucesso");
 
-buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.getElementById('modal_id').value = btn.dataset.id;
-        document.getElementById('modal_assunto').textContent = btn.dataset.assunto;
-        document.getElementById('modal_mensagem').textContent = btn.dataset.mensagem;
-        document.getElementById('modal_resposta').value = '';
-        modal.style.display = 'block';
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const emailUsuario = document.getElementById("email").value;
+        const nomeUsuario = document.getElementById("nome").value;
+        const assunto = document.getElementById("assunto").value;
+        const resposta = document.getElementById("resposta").value;
+
+        emailjs.send("service_dn2sl3i", "template_resposta_admin", {
+            email: emailUsuario,
+            name: nomeUsuario,
+            title: assunto,
+            resposta: resposta
+        })
+        .then(() => {
+            modalSucesso.classList.add("mostrar");
+            setTimeout(() => {
+                form.submit();
+            }, 1500);
+        })
+        .catch(() => {
+            alert("Erro ao enviar resposta por e-mail.");
+            form.submit();
+        });
     });
 });
-
-closeModal.onclick = () => modal.style.display = 'none';
-window.onclick = e => { if(e.target == modal) modal.style.display = 'none'; };
