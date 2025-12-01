@@ -1,0 +1,29 @@
+#dashboard-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 370px;
+}
+
+#dashboard-title a{
+    background-color: #E6C72B;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: ease 0.3s;
+}
+
+#dashboard-title a:hover{
+    background-color: #e5cf5e;
+    box-shadow: 1px 1px 10px #e5ce5e8b;
+}
+
+i{
+    color: #E6C72B;
+    margin-left: 5px;
+}
+
+.kpi-card{
+    margin-bottom: 50px;
+}

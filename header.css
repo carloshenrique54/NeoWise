@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Lovelo';
+    src: url(lovelo_black.otf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, th, strong, span{
+    font-family: 'Montserrat', sans-serif;
+}
+
+p, a, li, button, input, textarea, label, div{
+    font-family: 'Roboto';
+}
+
+#home, #cursos, #sobre, #contato, #forum{
+    text-decoration: none;
+    color: #ffffff;
+    transition: ease 0.3s;
+}
+
+#home:hover, #cursos:hover, #sobre:hover, #contato:hover, #forum:hover{
+    text-shadow: 0px 0px 10px #ffffff;
+}
+
+#home.active, #cursos.active, #sobre.active, #contato.active, #forum.active {
+    text-shadow: 0px 0px 10px #E6C72B;
+    font-weight: bold;
+    color: #E6C72B;
+}
+
+body{
+    margin: 0;
+    background-image: url("Mídias/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: default;
+    transition: ease 0.3s;
+}
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header{
+    background-color: rgba(16, 16, 16, 0.8);
+    display: flex;
+    font-family: 'Lovelo';
+    justify-content: space-evenly;
+    color: #ffffff;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    transition: ease 0.3s;
+    position: sticky;
+    top: 0; 
+    backdrop-filter: blur(5px);
+    border-bottom: solid 2px #E6C72B;
+    z-index: 1000;
+}
+
+body.light header {
+    background-color: #ffffff;
+    display: flex;
+    font-family: 'Lovelo';
+    justify-content: space-between;
+    border-bottom: solid 2px #101010;
+    color: #101010; 
+}
+
+body.light a{
+    text-decoration: none;
+    color: #101010;
+}
+
+header img{
+    width: 18%;
+    margin: 0%;
+}
+
+#cadastro{
+    background-image: linear-gradient(to right, #E6C72B, #e6b618);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: ease 0.3s;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+}
+
+header ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 100%;
+}
+
+header a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: ease 0.3s;
+}
+
+#toggle{
+    cursor: pointer;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+header a:hover{
+    text-shadow: 0px 0px 10px #ffffff;
+}
+
+#cadastro:hover{
+    color: #ffffff;
+    box-shadow: 0px 0px 10px #fdd92790;
+    background-image: linear-gradient(to right, #e4c736, #e2ba34);
+    transition: all 0.3s ease-in-out;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+
+#logo img{
+    width: 35%;
+    margin-right: 10px;
+}
+
+header h1{
+    font-size: 3em;
+    color: #e6b72b;
+}
+
+#footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    background-image: linear-gradient(to right, #2c2c2c, #1e1e1e,#131313);
+    color: #f1f1f1;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 97.3%;
+    bottom: 0;
+}
+
+#footer-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #ffb400; 
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.95rem;
+    color: #ddd;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffb400;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+footer::after {
+    content: "© 2025 FinWise - Todos os direitos reservados.";
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #aaa;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+#usuario_nome {
+    width: 40%;
+    font-size: 20px;
+}
+
+h3{
+    display: inline;
+    color: #E6C72B;
+}
+
+.foto-perfil {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+    border: 2px solid #E6C72B;
+    background-color: #ffffff;
+}

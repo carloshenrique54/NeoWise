@@ -1,0 +1,194 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 50px auto;
+}
+
+form a{
+    color: #E5B13A;
+    font-size: 16px;
+    transition: ease 0.3s;
+    margin-top: 10px;
+}
+
+form a:hover{
+    text-shadow: 0px 0px 5px #E6C72B;
+}
+
+#login_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    width: 30%;
+    padding-bottom: 80px;
+    background-color: rgb(34, 34, 34);
+}
+
+img{
+    width: 35.8%;
+    height: auto;
+}
+
+input{
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+}
+
+input:focus{
+    box-shadow: rgba(255, 255, 255, 0.463) 1px 1px 10px;
+    outline: none;
+    border: none;
+}
+
+form button{
+    background-color: #E6C72B;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    align-self: flex-start;
+    margin-top: 10px;
+    transition: ease 0.3s;
+}
+
+form button:hover{
+    box-shadow: 0px 0px 10px #e6c72b99;
+    transform: scale(1.05);
+}
+
+#mensagem{
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 900;
+}
+
+.modal-box {
+    background-color: rgb(34, 34, 34);
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    animation: modalFade 0.3s ease;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal-box input[type="email"] {
+    width: 94.5% !important;
+}
+
+.modal-box button {
+    width: 100% !important;
+}
+
+#modal-reset {
+    display: none; 
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #10b981;
+    color: #fff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-size: 15px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 1000;
+    font-family: 'roboto';
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#close-modal{
+    background: none;
+    border: none;
+    color: #E5B13A;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+#close-modal:hover{
+    text-shadow: 0px 0px 5px #E6C72B;
+    box-shadow: none;
+    transform: none;
+}
+
+#recuperar-senha{
+    margin-top: 0;
+    color: white;
+}
+
+#forgot-password{
+    margin-left: 10px;
+    background: none;
+    border: none;
+    color: #E5B13A;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    text-align: left;
+    padding: 0;
+    margin-left: 0;
+}
+
+#forgot-password:hover{
+    text-shadow: 0px 0px 5px #E6C72B;
+    box-shadow: none;
+    transform: none;
+}
+
+#label-email{
+    color: white;
+    margin-bottom: 10px;
+}

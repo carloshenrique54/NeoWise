@@ -1,0 +1,150 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: white;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #E6C72B;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Monstserrat', sans-serif;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-image: linear-gradient(to right, #E6C72B, #e6b618);
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #E6C72B;
+}
+
+.btn-cta:hover {
+    box-shadow: 0px 0px 10px #fdd92790;
+    background-image: linear-gradient(to right, #e4c736, #e2ba34);
+    transform: translateY(-2px);
+}
+
+.sobre-apresentacao {
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.sobre-apresentacao p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: 20px auto 0;
+}
+
+.mvv-container {
+    display: flex;
+    gap: 30px;
+    padding: 40px 0;
+    text-align: center;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.mvv-card {
+    border: 1px solid #eeeeee;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 280px;
+}
+
+.mvv-card h3 {
+    font-size: 1.5em;
+    border-bottom: 3px solid #E6C72B; 
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.mvv-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+.mvv-card li {
+    list-style: none; 
+    background-image: url('Mídias/check.png');
+    background-size: 20px 20px; 
+    background-repeat: no-repeat;
+    background-position: 0 50%; 
+    padding-left: 30px; 
+    margin-bottom: 10px; 
+    border-radius: 1px;
+}
+
+.cta-banner {
+    background-image: linear-gradient(to right, #1d1c1c, #262626);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.cta-banner h2 {
+    color: #ffffff; 
+    font-size: 2em;
+}
+
+.cta-banner p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.equipe-container {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.equipe-container h2 {
+    margin-bottom: 40px;
+}
+
+.perfil-card {
+    display: inline-block;
+    margin: 0 20px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.perfil-foto {
+    width: 150px;
+    height: 150px;
+    background-color: #E6C72B; 
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 5px solid #fff; 
+    box-shadow: 0 0 0 5px #E6C72B50; 
+}
+
+.perfil-card h4 {
+    font-size: 1.3em;
+    margin: 5px 0;
+}
+
+.perfil-card p {
+    font-size: 0.9em;
+}

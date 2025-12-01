@@ -1,0 +1,56 @@
+form{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #1d1c1c, #262626);
+    border-radius: 15px;
+    padding: 30px;
+    align-items: flex-start;
+    width: 50%;
+    margin: 20px auto;
+    justify-content: center;
+    background-color: white;
+}
+
+form label{
+    color: white;
+    font-family: 'Roboto';
+    margin-top: 5px;
+}
+
+form button{
+    background-color: #E6C72B;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    align-self: flex-start;
+    margin-top: 10px;
+    transition: ease 0.3s;
+}
+
+form button:hover{
+    box-shadow: 0px 0px 10px #e6c72b99;
+    transform: scale(1.05);
+}
+
+input{
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+}
+
+input:focus{
+    box-shadow: rgba(255, 255, 255, 0.463) 1px 1px 10px;
+    outline: none;
+    border: none;
+}
+
+form h1{
+    color:#E6C72B;
+    margin-bottom: 20px;
+}

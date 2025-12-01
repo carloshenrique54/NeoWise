@@ -1,0 +1,226 @@
+/* Importa a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- Estilos Globais --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #222; /* Fundo escuro */
+    color: #eee; /* Texto claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo principal */
+    margin: 0;
+}
+
+/* --- Cabeçalho e Títulos --- */
+h1 {
+    color: #E6C72B; /* Amarelo/Dourado */
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 20px 0 0 0; /* Remove margem inferior */
+    width: 90%; /* Largura principal */
+    max-width: 1200px;
+    text-align: center;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+}
+
+/* --- Mensagens Flash (feedback) --- */
+.flash {
+    width: 90%;
+    max-width: 1200px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #2a9d8f; /* Um verde para sucesso */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* --- Container dos botões superiores --- */
+/* (O <p> logo após o h1 ou .flash) */
+h1 + p,
+.flash + p {
+    width: 90%;
+    max-width: 1200px;
+    padding: 10px 0 20px 0;
+    box-sizing: border-box;
+    text-align: left; /* Alinha os botões à esquerda */
+}
+
+/* --- Estilo de Tabelas (Lista de Provas / Questões) --- */
+table {
+    /* Diferente da sua referência (que usa flex), usamos uma tabela padrão
+       com o TEMA da referência */
+    width: 90%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    background-color: rgb(80, 80, 80); /* Fundo da tabela */
+    color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 30px;
+    overflow: hidden; /* Para o border-radius funcionar */
+}
+
+thead tr {
+    background-color: #333; /* Fundo do cabeçalho da tabela */
+    color: #E6C72B; /* Texto do cabeçalho */
+    border-bottom: 2px solid #E6C72B;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #555; /* Linhas internas */
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1); /* Zebrado sutil */
+}
+
+tbody tr:hover {
+    background-color: rgba(230, 199, 43, 0.15); /* Hover amarelo */
+}
+
+/* Coluna de ações */
+td:last-child {
+    white-space: nowrap; /* Impede que os botões quebrem linha */
+    width: 1%; /* Faz a coluna ter o tamanho mínimo necessário */
+}
+
+/* --- Botões --- */
+.btn,
+button[type="submit"] {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 4px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Botão padrão (Editar, Questões, Salvar) */
+.btn,
+button[type="submit"] {
+    background-color: #E6C72B; /* Amarelo */
+    color: #222; /* Texto escuro */
+}
+
+.btn:hover,
+button[type="submit"]:hover {
+    background-color: #f0d54e;
+    transform: translateY(-1px);
+}
+
+/* Botão Excluir (vermelho) */
+.btn.del {
+    background-color: #e62b2b; /* Vermelho */
+    color: white;
+}
+
+.btn.del:hover {
+    background-color: #ff4c4c;
+}
+
+/* Botão "Novo" (verde) */
+a.btn[href*="action=form"],
+a.btn[href*="action=qform"] {
+    background-color: #2a9d8f; /* Verde */
+    color: white;
+}
+
+a.btn[href*="action=form"]:hover,
+a.btn[href*="action=qform"]:hover {
+    background-color: #3bc4b2;
+}
+
+/* Botão "Voltar" ou "Cancelar" (cinza) */
+p > a.btn[href="index.php"],
+a.btn[href*="action=list"],
+form > a {
+    background-color: #666; /* Cinza */
+    color: white;
+}
+
+p > a.btn[href="index.php"]:hover,
+a.btn[href*="action=list"]:hover,
+form > a:hover {
+    background-color: #888;
+}
+
+/* --- Formulários (Criar/Editar Prova / Questão) --- */
+form {
+    background-color: rgb(80, 80, 80); /* Mesmo fundo da tabela */
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px; /* Limita largura dos formulários */
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+form label {
+    font-weight: bold;
+    color: #E6C72B; /* Rótulos em amarelo */
+    margin-top: 15px;
+    display: block;
+}
+
+/* Esconde <br> desnecessários do PHP */
+form br {
+    display: none;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px; /* Espaçamento no lugar dos <br> */
+    background-color: #333;
+    border: 1px solid #555;
+    color: #eee;
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante para o width 100% */
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Estilo do Checkbox "Ativa" */
+form label input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    vertical-align: middle;
+}
+
+form label:has(input[type="checkbox"]) {
+    color: #eee; /* Cor normal para o texto do checkbox */
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Botões no final do formulário */
+form button[type="submit"] {
+    margin-top: 20px;
+}
+
+form a {
+    /* Link "Cancelar" */
+    margin-top: 20px;
+    margin-left: 10px;
+}

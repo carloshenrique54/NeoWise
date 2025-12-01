@@ -1,0 +1,78 @@
+main{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    align-items: flex-start;
+}
+
+#prova{
+    background-image: linear-gradient(to right, #2c2c2c, #3a3a3a);
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+main h2{
+    border-bottom: solid 5px #E6C72B;
+    text-align: center;
+    color: #E6C72B;
+    padding-bottom: 20px;
+}
+
+button[type="submit"]{
+    background-image: linear-gradient(to right, #E6C72B, #e6b618);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: ease 0.3s;
+}
+
+#voltar{
+    background-image: linear-gradient(to right, #E6C72B, #e6b618);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: ease 0.3s;
+}
+
+#voltar:hover{
+    background-color: #efd561;
+    box-shadow: 0px 0px 15px #e6c72b99;
+}
+
+button[type="submit"]:hover{
+    background-color: #e7ce4d;
+    box-shadow: #ffec8a6b 0px 0px 10px;
+} 
+
+.questao{
+    margin-bottom: 30px;
+    background-image: linear-gradient(to right, #1d1c1c, #262626);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.questao p{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #E6C72B;
+    font-family: 'Roboto';
+}
+
+.alternativas label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

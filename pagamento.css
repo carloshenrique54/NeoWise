@@ -1,0 +1,199 @@
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+#curso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: center;
+    margin: 20px auto;
+    background-color: rgb(28, 28, 28);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+img{
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#card1 {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #202020;
+    color: white;
+}
+
+#card1 label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#card1 input {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#card1 input:focus {
+    padding: 8px;
+    border: 3px solid #E6C72B;
+    box-shadow: 1px 1px 5px #E6C72B;
+}
+
+#card1 ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    margin-left: 0;
+}
+
+#resumo-compra{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 20px auto;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #202020;
+    color: white;
+    text-align: center;
+}
+#metodos-pagamento-cards {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#metodos-pagamento-cards input[type="radio"] {
+    display: none;
+}
+
+.metodo-card {
+    flex: 1; 
+    max-width: 250px; 
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 10px;
+}
+
+.metodo-card:hover {
+    border-color: #E6C72B; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#metodos-pagamento-cards input[type="radio"]:checked + .metodo-card {
+    border-color: #333333; 
+    background-color: #f0f0f0; 
+    box-shadow: 0 0 0 4px #E6C72B;
+}
+
+.card-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-icone {
+    font-size: 36px;
+    color: #333333;
+    line-height: 1; 
+}
+
+.card-texto {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: left;
+    color: #333333;
+    line-height: 1.2;
+}
+
+
+.card-desconto {
+    background-color: #dc3545; 
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 55% 80%, 50% 100%, 45% 80%, 00% 80%);
+    padding-bottom: 10px; 
+}
+
+#btn-pagamento {
+    background-color: #39D043;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#btn-pagamento:hover {
+    background-color: #2bbf36;
+}
+
+#pagamento{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#Pagamento-cartao{
+    display: none;
+    flex-direction: column;
+}
+
+#Pagamento-cartao input{
+    margin-bottom: 10px;
+}
+
+#Pagamento-pix{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#Pagamento-boleto{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Roboto';
+}
