@@ -130,17 +130,15 @@ $sql_topico_likes = "
 $result_topico_likes = $conn->query($sql_topico_likes);
 $kpis['topico_popular'] = $result_topico_likes->fetch_assoc();
 
-
-$conn->close();
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Finwise</title>
+    <title>NeoWise</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="Mídias/Logo branca.png">
 
     <style>
 
@@ -170,7 +168,7 @@ $conn->close();
       </div>
       <nav>
           <ul>
-              <li><a id="home" href="index.php">Home</a></li>
+              <li><a id="home" href="index.php">Ínicio</a></li>
               <li><a id="cursos" href="cursos.php">Cursos</a></li>
               <li><a id="sobre" href="sobre.php">Sobre</a></li>
               <li><a id="contato" href="contato.php">Contato</a></li>
@@ -179,10 +177,14 @@ $conn->close();
           <ul>
               <?php
               if (!isset($_SESSION['usuario'])) {
-                  echo '<li><a href="login.php">Login</a></li>';
-                  echo '<li><a id="cadastro" href="cadastro.php">Cadastre-se</a></li>';
-              } else {
-                  // Variáveis de sessão em minúsculas
+                  header('Location: login.php');
+                  exit();
+              } 
+              elseif ($_SESSION['usuario']['acesso'] != 2) {
+                  echo '<a href="perfiladm.php">' . '<li id="usuario_nome">Olá, ' . '<h3>' . $primeiro_nome . '</h3>'. '</li></a>';
+                  echo '<img src="' . htmlspecialchars($foto_perfil_url) . '" alt="Foto de Perfil" class="foto-perfil">';
+              } 
+              else {
                   echo '<a href="perfil.php">' . '<li id="usuario_nome">Olá, ' . '<h3>' . $primeiro_nome . '</h3>'. '</li></a>';
                   echo '<img src="' . htmlspecialchars($foto_perfil_url) . '" alt="Foto de Perfil" class="foto-perfil">';
               }
@@ -245,6 +247,44 @@ $conn->close();
             <p>Nenhum tópico encontrado.</p>
         <?php endif; ?>
     </div>
+
+    <h2 class="section-title">Posts no fórum</h2>
+
+<div class="kpi-card">
+    <h3>Posts Recentes</h3>
+    <?php
+    if (!$conn) {
+        die("Erro na conexão com o banco.");
+    }
+
+    $sql = "SELECT idmensagem, cpfmensagem, mensagem, hr, topico, likes
+            FROM forum
+            ORDER BY hr DESC
+            LIMIT 10";
+    $res = $conn->query($sql);
+
+    if ($res && $res->num_rows > 0):
+        while ($post = $res->fetch_assoc()):
+    ?>
+        <div class="mensagemss"">
+            <h4><strong>Tópico:</strong> <?php echo htmlspecialchars($post['topico']); ?></h4>
+            <h4><strong>Autor (CPF):</strong> <?php echo htmlspecialchars($post['cpfmensagem']); ?></h4>
+            <h4>Mensagem:</strong> <?php echo htmlspecialchars($post['mensagem']); ?></p>
+            <h4><strong>Data/Hora:</strong> <?php echo date('d/m/Y H:i', strtotime($post['hr'])); ?></h4>
+            <h4><strong>Likes:</strong> <?php echo $post['likes']; ?></h4>
+
+            <form method="post" action="deletar_post.php" onsubmit="return confirm('Tem certeza que deseja deletar este post?');">
+                <input type="hidden" name="idmensagem" value="<?php echo $post['idmensagem']; ?>">
+                <button type="submit">Deletar</button>
+            </form>
+        </div>
+    <?php
+        endwhile;
+    else:
+    ?>
+        <p>Nenhum post encontrado.</p>
+    <?php endif; ?>
+</div>
 
 </div>
 
@@ -347,13 +387,13 @@ $conn->close();
 <footer>
     <div id="footer-content">
         <div class="footer-section">
-            <h3>FinWise</h3>
+            <h3>NeoWise</h3>
             <p>Sua plataforma de cursos online para se tornar um profissional de destaque no mercado.</p>
         </div>
         <div class="footer-section">
             <h3>Links Rápidos</h3>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php">Ínicio</a></li>
                 <li><a href="cursos.php">Cursos</a></li>
                 <li><a href="sobre.php">Sobre</a></li>
                 <li><a href="contato.php">Contato</a></li>

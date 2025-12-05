@@ -173,3 +173,11 @@ main{
     background-color: #edd147;
     box-shadow: #E6C72B 0px 0px 10px;
 }
+
+.modal-content{
+    background-color: #3a3a3a;
+}
+
+tbody tr:hover {
+    background-color: rgba(230, 199, 43, 0.15);
+}

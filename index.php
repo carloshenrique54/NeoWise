@@ -51,7 +51,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['usuario']['cpf'])) {
     </div>
     <nav>
         <ul>
-            <li><a id="home" href="index.php">Home</a></li>
+            <li><a id="home" href="index.php">Ínicio</a></li>
             <li><a id="cursos" href="cursos.php">Cursos</a></li>
             <li><a id="sobre" href="sobre.php">Sobre</a></li>
             <li><a id="contato" href="contato.php">Contato</a></li>
@@ -90,7 +90,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['usuario']['cpf'])) {
         <div class="container">
             <h2>Os <span>melhores cursos</span> para <span>impulsionar</span> sua <span>carreira</span></h2>
             <p>Uma única matrícula, um universo de possibilidades. Comece hoje e garanta acesso imediato a todos os cursos e formações.</p>
-            <a href="sobre.html">Veja como funciona</a>
+            <a href="sobre.php">Veja como funciona</a>
         </div>
         <img src="Mídias/jovem estudando.jpg" alt="Imagem de benefícios" />
     </section>

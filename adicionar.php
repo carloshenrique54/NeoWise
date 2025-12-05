@@ -36,7 +36,7 @@ input, textarea { padding:8px; border:1px solid #ccc; border-radius:4px; width:1
     </div>
     <nav>
         <ul>
-            <li><a id="home" href="index.php">Home</a></li>
+            <li><a id="home" href="index.php">Ínicio</a></li>
             <li><a id="cursos" href="cursos.php">Cursos</a></li>
             <li><a id="sobre" href="sobre.php">Sobre</a></li>
             <li><a id="contato" href="contato.php">Contato</a></li>

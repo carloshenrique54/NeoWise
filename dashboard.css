@@ -25,5 +25,39 @@ i{
 }
 
 .kpi-card{
+    background-image: linear-gradient(to right, #1d1c1c, #262626);
+    border-top: #E6C72B 2px solid;
     margin-bottom: 50px;
+}
+
+.chart-container{
+    background-image: linear-gradient(to right, #1d1c1c, #262626);
+    border-top: #E6C72B 2px solid;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.mensagemss{
+    color: white;
+    background-image: linear-gradient(to right, #3a3a3a, #2d2d2d);
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border-top: #E6C72B 2px solid;
+}
+
+.mensagemss button{
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease 0.3s;
+    margin-bottom: 10px;
+    background-color: #e62b2b;
+}
+
+.mensagemss button:hover{
+    background-color: #ff4c4c;
+    box-shadow: 1px 1px 10px #ff4c4c8b;
 }

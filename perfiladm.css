@@ -124,10 +124,6 @@
     background-color: #d1b126;
 }
 
-/* ======================================================= */
-/* === COLUNA PRINCIPAL (SECTIONS) === */
-/* ======================================================= */
-
 .perfil-principal {
     display: flex;
     flex-direction: column;
@@ -208,14 +204,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    background-color: #2c2c2c; /* bg-card */
+    background-image: linear-gradient(to right, #1d1c1c, #262626);
+    border-top: #E6C72B 2px solid;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dashboard-item {
-    background-color: #3a3a3a;
+    background-image: linear-gradient(to right, #3a3a3a, #2d2d2d);
     border-radius: 8px;
     width: 90%;
     padding: 15px;
@@ -267,4 +264,20 @@
     margin: 10px;
     display: flex;
     flex-direction: column;
+}
+
+select{
+    background-color: #333333;
+    color: #E6C72B;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+
+select option{
+    background-color: #1e1e1e;
+    color: #E6C72B;
+    outline: none;
+    border: none;
 }

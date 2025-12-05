@@ -12,7 +12,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinWise</title>
+    <title>NeoWise</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="sobre.css">
     <link rel="icon" href="Mídias/Logo-branca.ico">
@@ -24,7 +24,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
     <nav>
         <ul>
-            <li><a id="home" href="index.php">Home</a></li>
+            <li><a id="home" href="index.php">Ínicio</a></li>
             <li><a id="cursos" href="cursos.php">Cursos</a></li>
             <li><a id="sobre" href="sobre.php">Sobre</a></li>
             <li><a id="contato" href="contato.php">Contato</a></li>
@@ -97,7 +97,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="footer-section">
                 <h3>Links Rápidos</h3>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php">Ínicio</a></li>
                     <li><a href="cursos.php">Cursos</a></li>
                     <li><a href="sobre.php">Sobre</a></li>
                     <li><a href="contato.php">Contato</a></li>

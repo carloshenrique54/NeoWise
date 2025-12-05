@@ -112,7 +112,7 @@ button[type="submit"] {
 .btn,
 button[type="submit"] {
     background-color: #E6C72B; /* Amarelo */
-    color: #222; /* Texto escuro */
+    color: white;
 }
 
 .btn:hover,
@@ -220,7 +220,11 @@ form button[type="submit"] {
 }
 
 form a {
-    /* Link "Cancelar" */
     margin-top: 20px;
     margin-left: 10px;
+}
+
+button [type="submit"],
+.btn {
+    font-family: 'Roboto';
 }

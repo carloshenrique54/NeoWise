@@ -103,7 +103,7 @@ if ($action === 'list') {
     <?php if ($flash): ?><div class="flash"><?= esc($flash) ?></div><?php endif; ?>
     <p>
       <a class="btn" href="criarprova.php?action=form">+ Nova Prova</a>
-      <a class="btn" href="index.php">Voltar ao site</a>
+      <a class="btn" href="perfiladm.php">Voltar</a>
     </p>
 
     <table>
@@ -437,7 +437,7 @@ if ($action === 'qform') {
     </div>
     <nav>
         <ul>
-            <li><a id="home" href="index.php">Home</a></li>
+            <li><a id="home" href="index.php">Ínicio</a></li>
             <li><a id="cursos" href="cursos.php">Cursos</a></li>
             <li><a id="sobre" href="sobre.php">Sobre</a></li>
             <li><a id="contato" href="contato.php">Contato</a></li>
@@ -514,13 +514,13 @@ if ($action === 'qform') {
     <footer>
         <div id="footer-content">
             <div class="footer-section">
-                <h3>FinWise</h3>
+                <h3>NeoWise</h3>
                 <p>Sua plataforma de cursos online para se tornar um profissional de destaque no mercado.</p>
             </div>
             <div class="footer-section">
                 <h3>Links Rápidos</h3>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php">Ínicio</a></li>
                     <li><a href="cursos.php">Cursos</a></li>
                     <li><a href="sobre.php">Sobre</a></li>
                     <li><a href="contato.php">Contato</a></li>
@@ -528,9 +528,9 @@ if ($action === 'qform') {
             </div>
             <div class="footer-section">
                 <h3>Contato</h3>
-                <p>Email: contato@finwise.com.br</p>
+                <p>Email: contato@neowise.com.br</p>
                 <p>Telefone: (11) 1234-5678</p>
-                <p>Instagram: @finwise</p>
+                <p>Instagram: @neowise</p>
             </div>
         </div>
     </footer>

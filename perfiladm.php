@@ -118,7 +118,7 @@ $ganhos_formatado = number_format((float)$ganhos, 2, ',', '.');
     </div>
     <nav>
         <ul>
-            <li><a id="home" href="index.php">Home</a></li>
+            <li><a id="home" href="index.php">Ínicio</a></li>
             <li><a id="cursos" href="cursos.php">Cursos</a></li>
             <li><a id="sobre" href="sobre.php">Sobre</a></li>
             <li><a id="contato" href="contato.php">Contato</a></li>
@@ -217,13 +217,13 @@ $ganhos_formatado = number_format((float)$ganhos, 2, ',', '.');
   <footer>
       <div id="footer-content">
           <div class="footer-section">
-              <h3>FinWise</h3>
+              <h3>NeoWise</h3>
               <p>Sua plataforma de cursos online para se tornar um profissional de destaque no mercado.</p>
           </div>
           <div class="footer-section">
               <h3>Links Rápidos</h3>
               <ul>
-                  <li><a href="index.php">Home</a></li>
+                  <li><a href="index.php">Ínicio</a></li>
                   <li><a href="cursos.php">Cursos</a></li>
                   <li><a href="sobre.php">Sobre</a></li>
                   <li><a href="contato.php">Contato</a></li>

@@ -23,7 +23,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
     <nav>
         <ul>
-            <li><a id="home" href="index.php">Home</a></li>
+            <li><a id="home" href="index.php">Ínicio</a></li>
             <li><a id="cursos" href="cursos.php">Cursos</a></li>
             <li><a id="sobre" href="sobre.php">Sobre</a></li>
             <li><a id="contato" href="contato.php">Contato</a></li>
@@ -81,7 +81,7 @@ if (session_status() === PHP_SESSION_NONE) {
             </div>
             <div class="faq-item">
                 <h3>Quais são os métodos de pagamento aceitos?</h3>
-                <p>A FinWise aceita pagamentos via cartão de crédito, boleto bancário e PayPal.</p>
+                <p>A NeoWise aceita pagamentos via cartão de crédito, boleto bancário e PayPal.</p>
             </div>
             <div class="faq-item">
                 <h3>Posso acessar os cursos offline?</h3>
@@ -101,7 +101,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="footer-section">
                 <h3>Links Rápidos</h3>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php">Ínicio</a></li>
                     <li><a href="cursos.php">Cursos</a></li>
                     <li><a href="sobre.php">Sobre</a></li>
                     <li><a href="contato.php">Contato</a></li>
